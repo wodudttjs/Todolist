@@ -1,28 +1,19 @@
-import React, { useState } from "react";
-import HabitTracker from "./components/HabitTracker";
+import React from "react";
+import Header from "./components/Header";
+import Calendar from "./components/Calendar";
+import WeeklySchedule from "./components/WeeklySchedule";
 import "./styles.css";
 
 function App() {
-  const [habits, setHabits] = useState([]);
-
-  const addHabit = (habit) => {
-    setHabits([...habits, { name: habit, completed: false }]);
-  };
-
-  const toggleHabit = (index) => {
-    const newHabits = habits.map((habit, i) => 
-      i === index ? { ...habit, completed: !habit.completed } : habit
-    );
-    setHabits(newHabits);
-  };
-
   return (
     <div className="App">
-      <h1>Habit Tracker</h1>
-      <HabitTracker habits={habits} onAdd={addHabit} onToggle={toggleHabit} />
+      <Header/>
+      <main className="main-content">
+        <Calendar/>
+        <WeeklySchedule/>
+      </main>
     </div>
   );
 }
 
 export default App;
-
