@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-
+import  "./Calendar.css";
+import "./weekly-schedule.css";
 function Calendar() {
   // 상태: 현재 년/월 저장
   const [currentDate, setCurrentDate] = useState(new Date());
@@ -25,7 +26,7 @@ function Calendar() {
   };
 
   return (
-    <section className="calendar">
+    <section className="weekly-schedule">
       {/* 달력 헤더 */}
       <div className="calendar-header">
         <button onClick={() => handleMonthChange(-1)}>{"<"}</button>
@@ -36,7 +37,7 @@ function Calendar() {
       </div>
 
       {/* 달력 날짜 */}
-      <table className="calendar-table">
+      <table className="Calendar">
         <thead>
           <tr>
             <th>Sun</th>
@@ -48,7 +49,7 @@ function Calendar() {
             <th>Sat</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="calendar-table td.valid-day ">
           {/* 날짜 그리드 */}
           {Array.from({ length: Math.ceil((firstDayOfMonth + daysInMonth) / 7) }).map((_, weekIndex) => (
             <tr key={weekIndex}>

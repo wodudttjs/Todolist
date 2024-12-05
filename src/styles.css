@@ -3,10 +3,16 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f8f8f8;
+ 
 }
 
 .App {
   text-align: center;
+  max-height :844px;
+  max-width:390px;
+  width:85%;
+  display: flex;
+  
 }
 
 .header {
@@ -16,6 +22,7 @@ body {
   padding: 15px 20px;
   background-color: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
 }
 
 .header-title {
@@ -39,6 +46,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .add-button i {
@@ -47,110 +55,15 @@ body {
 }
 
 .main-content {
-  padding: 20px;
-}
-
-.calendar {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-}
-
-.calendar-header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.calendar-header h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin: 0;
-  color: #333;
-}
-
-.calendar-nav button {
-  background: #d1cdb8;
-  border: none;
-  border-radius: 50%;
-  padding: 8px 12px;
-  cursor: pointer;
-  color: white;
-  font-size: 1rem;
-}
-
-.calendar-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.calendar-table th,
-.calendar-table td {
-  padding: 15px;
-  text-align: center;
-  color: #666;
-}
-
-.calendar-table th {
-  font-weight: bold;
-  color: #888;
-}
-
-.calendar-table td.valid-day {
-  background: #f9f9f9;
-  border-radius: 50%;
-  cursor: pointer;
-  color: #333;
-  transition: all 0.3s ease;
-}
-
-.calendar-table td.valid-day:hover {
-  background: #d1cdb8;
-  color: white;
-}
-
-.calendar-table .selected {
-  background: #d1cdb8;
-  color: white;
-}
-
-.weekly-schedule {
-  background: white;
   padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.weekly-schedule h3 {
-  text-align: left;
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 15px;
-  color: #333;
-}
-
-.weekly-schedule ul {
-  list-style: none;
-  padding: 0;
-}
-
-.weekly-schedule li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid #f0f0f0;
-  color: #555;
-}
-
-.weekly-schedule li:last-child {
-  border-bottom: none;
+  max-height: 844px;
+  height:35%;
+  
 }
 
 .event-time {
   font-weight: bold;
   color: gray;
+  
 }

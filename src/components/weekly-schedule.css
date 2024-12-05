@@ -1,0 +1,33 @@
+.weekly-schedule {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .weekly-schedule h3 {
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .weekly-schedule ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .weekly-schedule li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+    color: #555;
+  }
+  
+  .weekly-schedule li:last-child {
+    border-bottom: none;
+  }
+  
