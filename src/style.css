@@ -74,3 +74,8 @@ body, h1, ul, li, input, button {
   {
     background-color: aqua;
   }
+  .calendar-container {
+    margin-bottom: 10px;
+    border-radius: 200px;
+    width: 400px;
+  }

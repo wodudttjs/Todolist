@@ -1,15 +1,18 @@
 import React, { useState } from "react";
+import CalendarComponent from "./components/Calendar";
 import "./style.css";
 
 function App() {
   const [todos, setTodos] = useState([]);
   const [todoInput, setTodoInput] = useState("");
+  const [selectedDate, setSelectedDate] = useState(new Date());
 
   // 할 일 추가 함수
   const addTodo = () => {
     const trimmedInput = todoInput.trim();
     if (trimmedInput) {
-      setTodos([...todos, trimmedInput]);
+      const newTodo = { text: trimmedInput, date: selectedDate };
+      setTodos([...todos, newTodo]);
       setTodoInput("");
     }
   };
@@ -27,6 +30,8 @@ function App() {
       </header>
 
       <main>
+        <CalendarComponent onDateSelect={setSelectedDate} />
+
         <div className="todo-input">
           <input
             type="text"
@@ -34,13 +39,17 @@ function App() {
             value={todoInput}
             onChange={(e) => setTodoInput(e.target.value)}
           />
-          <button className="addbutton" onClick={addTodo} >추가</button>
+          <button className="addbutton" onClick={addTodo}>
+            추가
+          </button>
         </div>
 
         <ul className="todo-list">
           {todos.map((todo, index) => (
             <li key={index}>
-              <span>{todo}</span>
+              <span>
+                {todo.text} ({new Date(todo.date).toLocaleDateString()})
+              </span>
               <button onClick={() => deleteTodo(index)}>삭제</button>
             </li>
           ))}
