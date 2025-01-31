@@ -1,4 +1,5 @@
-# Getting Started with Create React App
+실행 방법 :다운받고-> 터미널->npm install ->npm start ->끝
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
